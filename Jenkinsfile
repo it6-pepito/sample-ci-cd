@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'sample_linux_server'
+    }
 
     stages {
         stage('Checkout') {
