@@ -10,21 +10,17 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                echo "Building application..."
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo "Running tests..."
-            }
-        }
-
         stage('Deploy') {
             steps {
                 echo "Deploying application..."
+
+                dir('/var/www/sample-ci-cd') {
+                    checkout scm
+                    sh '''
+                    pwd
+                    ls -l
+                    '''
+                }
             }
         }
     }
