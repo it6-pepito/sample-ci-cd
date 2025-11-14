@@ -4,16 +4,11 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
        stage('Deploy') {
             steps {
                 script {
                     def targetDir = "/var/www/sample-ci-cd"
+                    def workspaceDir = "${env.WORKSPACE}"
         
                     // cek apakah folder kosong
                     def isEmpty = sh(
@@ -32,13 +27,11 @@ pipeline {
                         echo "Folder sudah ada → lakukan update (fetch + reset)"
         
                         sh """
-                            cd ${targetDir}
-                            git fetch --all
-                            git reset --hard origin/main
+                            rsync -av --delete ${workspaceDir}/ ${targetDir}/
                         """
                     }
                 }
-            }
+            }s
         }
     }
 }
