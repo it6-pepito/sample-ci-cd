@@ -1,11 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing Page CI/CD Sederhana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <p>This is Text 11:57</p>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">CI/CD Hub</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:text-blue-200">Beranda</a></li>
+                    <li><a href="#features" class="hover:text-blue-200">Fitur</a></li>
+                    <li><a href="#about" class="hover:text-blue-200">Tentang</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Selamat Datang di Dunia CI/CD</h2>
+            <p class="text-lg md:text-xl mb-8">Otomatisasi pengembangan perangkat lunak dengan Continuous Integration dan Continuous Deployment.</p>
+            <a href="#features" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-8">Apa Itu CI/CD?</h3>
+            <p class="text-lg max-w-2xl mx-auto mb-8">
+                CI/CD adalah praktik pengembangan perangkat lunak yang memungkinkan tim untuk mengintegrasikan perubahan kode secara otomatis dan men-deploy aplikasi dengan cepat dan aman. Ini meningkatkan efisiensi dan mengurangi risiko kesalahan.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-semibold mb-4">Continuous Integration (CI)</h4>
+                    <p>Otomatisasi penggabungan kode dari berbagai kontributor, dengan pengujian otomatis untuk memastikan kualitas.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-semibold mb-4">Continuous Deployment (CD)</h4>
+                    <p>Otomatisasi proses deployment aplikasi ke lingkungan produksi setelah pengujian berhasil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12">Fitur Utama</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🚀</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Deployment Cepat</h4>
+                    <p>Deploy aplikasi dalam hitungan menit dengan pipeline otomatis.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Pengujian Otomatis</h4>
+                    <p>Jalankan unit test, integration test, dan lainnya secara otomatis.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Monitoring Real-Time</h4>
+                    <p>Pantau performa dan kesalahan aplikasi secara langsung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-blue-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 CI/CD Hub. Semua hak dilindungi.</p>
+            <p class="mt-2">Hubungi kami: info@cicdhub.com</p>
+            <p class="mt-2 text-sm">Last Updated: Oktober 2023</p>
+        </div>
+    </footer>
 </body>
 </html>
